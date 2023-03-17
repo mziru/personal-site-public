@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href={{ url_for('static', filename='/img/favicon.ico') }}>
+    <link rel="stylesheet" href={{ url_for('static', filename='css/stylesheet.css') }}>
+    <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.css">
+    <meta charset="UTF-8">
+    <meta property="og:image" content="https://personal-project-379021.wl.r.appspot.com/static/img/header_image_cropped.png">
+    <title>Martin Zirulnik</title>
+</head>
+<header>
+</header>
+<nav class="" id="top-nav">
+  <div class="container">
+    <img class="profile-image" src="/static/img/profile_bw.jpg" alt="Martin Zirulnik">
+    <a href="javascript:void(0);" id=toggle class="icon" onclick="menuFunction()" style="display: none;">
+        <i class="fa fa-bars" id="bars-icon"></i><i class="fa-solid fa-x" id="x-icon" style="display: none"></i>
+    </a>
+      <ul>
+      <li class="selected">
+        <input id='about-tab' name="tab" type="radio" onchange="changeTab(this)" checked=checked value="about">
+        <label for='about-tab'> About </label>
+      </li>
+      <li>
+        <input id='projects-tab' name="tab" type="radio" onchange="changeTab(this)" value="projects">
+        <label for='projects-tab'> Projects </label>
+      </li>
+        <li>
+        <input id='blog-tab' name="tab" type="radio" onchange="changeTab(this)" value="blog">
+        <label for='blog-tab'> Blog </label>
+      </li>
+
+      <li>
+        <input id='pedagogy-tab' name="tab"  type="radio" onchange="changeTab(this)" value="pedagogy">
+        <label for='pedagogy-tab'> Research/Pedagogy </label>
+      </li>
+    </ul>
+
+    <ul>
+
+      <li>
+        <a href="https://www.linkedin.com/in/martin-zirulnik-ph-d-9a9bab217/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+      </li>
+      <li>
+        <a href="https://github.com/mziru" target="_blank"><i class="fa-brands fa-github-square"></i></a>
+      </li>
+      <li>
+        <a href="https://forms.gle/cB6Gj9dMmHPS2RvDA"
+           target="_blank"><i class="fa fa-square-envelope"></i></a>
+      </li>    </ul>
+  </div>
+    <div>
+    <ul id="hamburger-tabs" style="display: none;">
+          <li class="selected-hidden">
+            <input id='about-tab-hamburger' name="tab-hamburger" type="radio" onchange="changeTab(this)" checked="checked" value="about">
+            <label for='about-tab-hamburger'> About </label>
+          </li>
+          <li>
+            <input id='projects-tab-hamburger' name="tab-hamburger" type="radio" onchange="changeTab(this)" value="projects">
+            <label for='projects-tab-hamburger'> Projects </label>
+          </li>
+            <li>
+            <input id='blog-tab-hamburger' name="tab-hamburger" type="radio" onchange="changeTab(this)" value="blog">
+            <label for='blog-tab-hamburger'> Blog </label>
+          </li>
+
+          <li>
+            <input id='pedagogy-tab-hamburger' name="tab-hamburger"  type="radio" onchange="changeTab(this)" value="pedagogy">
+            <label for='pedagogy-tab-hamburger'> Research/Pedagogy </label>
+          </li>
+    </ul>
+
+    </div>
+</nav>
+
+
+<section id="main">
+  <h2 style="display: none;">Martin Zirulnik</h2>
+  <div id="tab-about" class="container tab-section">
+    <article>
+      <header>
+        <h2>Martin Zirulnik, PhD</h2>
+      </header>
+      <div>
+          <p>A site for eclectic sharing: professional info, projects, code, writing (academic and otherwise,
+              technological and otherwise), course information, and pedagogical materials.</p>
+          <p>I am a Los Angeles based researcher, educator, and software developer who likes to talk about language
+              and data technology. Feel free to <a class="text-link" href="https://forms.gle/cB6Gj9dMmHPS2RvDA">get in touch</a> with queries.</p>
+      </div>
+    </article>
+</div>
+  <div id="tab-projects" class="container tab-section">
+    <article id="projects_orm">
+      <header>
+        <div>
+{#          <i class="fa fa-calendar" aria-hidden="true"></i>#}
+          <span>February 27, 2023</span>
+          <span><i class="fa fa-user" aria-hidden="true"></i> Martin Zirulnik</span>
+        </div>
+        <h2>Web API with Object Relational Mapping </h2>
+      </header>
+      <div>
+          <details>
+            <summary>A model RESTful web API with create, read, update, and delete (CRUD)
+                    operations and data persistence. It is scalable and intended to serve as a foundation for developing
+                    more complex database interfaces in Python using Object-Relational Mapping.
+                <span class="icon"><i class="fa fa-angle-down"></i></span></summary>
+                <div>The sample data models represent fictional people and Covid-19 test results, which have a one-to-many
+                    relationship. Each person's Covid status is updated automatically based on their most recent test
+                    result.</div>
+                <p><b>Technologies:</b></p>
+              <ul>
+                  <li>Google App Engine and Google Cloud SQL for cloud deployment</li>
+                  <li>Flask web framework</li>
+                  <li>PostgreSQL for RDBMS</li>
+                  <li>SQLAlchemy for ORM</li>
+                  <li>marshmallow for data object serialization</li>
+                  <li>Swagger for API design and documentation (OpenAPI Specification)</li>
+              </ul>
+              <p><a class="img-link" href="https://raw.githubusercontent.com/mziru/web-api-with-orm/master/swagger-ui.png">
+                  <img src="https://raw.githubusercontent.com/mziru/web-api-with-orm/master/swagger-ui.png" alt="swagger-ui"></a></p>
+
+
+              <div>
+                  <footer>
+                      <a href="https://github.com/mziru/web-api-with-orm" target="_blank">More Info and Code</a>
+            </footer>
+              </div>
+          </details>
+      </div>
+    </article>
+    <article id="projects_wordle">
+      <header>
+        <div>
+          <span>July 28, 2022</span>
+          <span><i class="fa fa-user" aria-hidden="true"></i> Martin Zirulnik</span>
+        </div>
+        <h2>Wordle Bot with Browser Automation </h2>
+      </header>
+      <div>
+          <details>
+            <summary>A quick project to experiment with using browser automation to solve Wordle, a popular puzzle game
+                available on the New York times website.
+                <span class="icon"><i class="fa fa-angle-down"></i></span></summary>
+              <p><span> The bot builds on an <a class="text-link" href="https://towardsdatascience.com/automatic-wordle-solving-a305954b746e" target="_blank">
+                   algorithm initially developed by Yotam Gafni</a> and has a 100% win rate. This version adds:</span></p>
+              <ul>
+                  <li>browser control and full automation on the New York Times Wordle site using Selenium WebDriver</li>
+                  <li>optimization to reduce runtimes and the average number of guesses to reach the correct solution</li>
+              </ul>
+              <video src="https://user-images.githubusercontent.com/91102080/181628012-301015ab-e037-4857-96f4-d4c5fefc4126.mp4"
+                     data-canonical-src="https://user-images.githubusercontent.com/91102080/181628012-301015ab-e037-4857-96f4-d4c5fefc4126.mp4"
+                     controls="controls" muted="muted" class="d-block rounded-bottom-2 border-top width-fit" style="width: 100%">
+              </video>
+              <div>
+                  <footer>
+                      <a href="https://github.com/mziru/wordle-bot" target="_blank">More Info and Code</a>
+            </footer>
+              </div>
+          </details>
+      </div>
+    </article>
+    <article id="projects_movie">
+      <header>
+        <div>
+{#          <i class="fa fa-calendar" aria-hidden="true"></i>#}
+          <span>January 25, 2022</span>
+          <span><i class="fa fa-user" aria-hidden="true"></i> Martin Zirulnik</span>
+        </div>
+        <h2> Movie Keyword Data Explorer </h2>
+      </header>
+      <div>
+          <details>
+            <summary>A web application for wrangling, exploring, and modeling movie data based on keywords.
+                <span class="icon"><i class="fa fa-angle-down"></i></span></summary>
+                <div>The app uses the open-source TMDB web API to generate a custom dataset based on user input keyword(s),
+                automatically cleans the data, outputs some exploratory visualizations, and gives the user options to
+                train, visualize, and tune a Latent Dirichlet allocation (LDA) topic model based on natural language
+                data (titles, taglines, and synopses).</div>
+                <p><i>Note: this is a pretty old project with basic functionality and a rudimentary UI, and it has not
+                been maintained. If you're interested in seeing further development on it (or related ideas), feel free
+                to <a class="text-link" href="https://forms.gle/cB6Gj9dMmHPS2RvDA">contact me</a>.</i></p>
+                <p><b>Technologies:</b></p>
+              <ul>
+                  <li>Natural Language Processing and Modeling:</li>
+                  <li style="list-style-type: none">
+                      <ul>
+                          <li>Gensim</li>
+                          <li>spaCy</li>
+                          <li>NLTK</li>
+                      </ul>
+                  </li>
+                  <li>Visualizations:</li>
+                  <li style="list-style-type: none">
+                      <ul>
+                          <li>pyLDAvis</li>
+                          <li>Matplotlib</li>
+                          <li>seaborn</li>
+                          <li>wordcloud</li>
+                      </ul>
+                  </li>
+                  <li>Math and Data Structures:</li>
+                  <li style="list-style-type: none">
+                      <ul>
+                          <li>Pandas</li>
+                          <li>NumPy</li>
+                      </ul>
+                  </li>
+                  <li>Browser Interface</li>
+                  <li style="list-style-type: none">
+                      <ul>
+                          <li>PyWebIO</li>
+                          <li>Flask</li>
+                      </ul>
+                  </li>
+              </ul>
+              <p>Some sample output for the keyword "alien":</p>
+              <a class="img-link" href="https://raw.githubusercontent.com/mziru/keyword-data-explorer/master/readme%20images/genre_plot.png">
+                  <img src="https://raw.githubusercontent.com/mziru/keyword-data-explorer/master/readme%20images/genre_plot.png" alt="genre plot"></a>
+              <a class="img-link" href="https://raw.githubusercontent.com/mziru/keyword-data-explorer/master/readme%20images/lda_viz.png">
+                  <img src="https://raw.githubusercontent.com/mziru/keyword-data-explorer/master/readme%20images/lda_viz.png" alt="explore prompt"></a>
+
+
+              <div>
+                  <footer>
+                      <a href="https://github.com/mziru/keyword-data-explorer" target="_blank">More Info and Code</a>
+            </footer>
+              </div>
+          </details>
+      </div>
+    </article>
+    <article id="projects_guess-who">
+      <header>
+        <div>
+          <span>December 27, 2021</span>
+          <span><i class="fa fa-user" aria-hidden="true"></i> Martin Zirulnik</span>
+        </div>
+        <h2>Maximizing Information Gain: <i>Guess Who?</i> </h2>
+      </header>
+      <div>
+          <details>
+              <summary>A simple web app that maximizes the chances of winning at the children's game <i>Guess
+                  Who?</i> Using a browser interface, it outputs the best yes-or-no question to ask during each turn,
+                  traversing a binary decision tree based on user input responses.
+                <span class="icon"><i class="fa fa-angle-down"></i></span></summary>
+              <p>The algorithm works by maximizing information gain; that is, it transforms the game dataset into a
+                  decision tree by splitting nodes into sub-nodes on the unknown variable (a physical feature of the
+                  opponent's character) with the greatest entropy in the context of the target variable (the name of
+                  the opponent's character).</p>
+              <a class="img-link" href="https://github.com/mziru/guess-who-webIO/blob/master/tree.svg?raw=true" style="width: 100%">
+                  <img src="https://github.com/mziru/guess-who-webIO/blob/master/tree.svg?raw=true" alt="tree image"></a>
+              <div>
+                  <footer>
+                      <a href="https://github.com/mziru/guess-who-webIO/blob/master/guess_who_algorithm.ipynb" target="_blank">View Notebook</a>
+                      <a href="https://github.com/mziru/guess-who-webIO" target="_blank">Visit Repo</a>
+            </footer>
+              </div>
+          </details>
+      </div>
+    </article>
+  </div>
+  <div id="tab-blog" class="container tab-section">
+      <article>
+      <header>
+        <h2>Technical Blog (check back soon!) </h2>
+      </header>
+      <div>
+        <p>Here I will share writing about technical topics related to software development work, including more
+            detailed information about past and present projects, explications of problem-solving processes, and
+            insights gained from exploring and implementing new technologies.</p>
+      </div>
+      <footer>
+        <a href="#">Coming Soon ...</a>
+      </footer>
+    </article>
+   </div>
+  <div id="tab-pedagogy" class="container tab-section">
+    <article id="pedagogy_visual-ml">
+      <header>
+        <div>
+{#          <i class="fa fa-calendar" aria-hidden="true"></i>#}
+          <span>June 21, 2022</span>
+          <span><i class="fa fa-user" aria-hidden="true"></i> Martin Zirulnik</span>
+        </div>
+        <h2>Technical Curriculum: Visual ML Tools for Predictive Modeling</h2>
+      </header>
+      <div>
+          <p>A sample training sequence designed to teach new users how to create end-to-end machine learning projects
+              with Dataiku DSS, a popular platform for building and managing AI and ML workflows.</p>
+          <p>Topics include: data cleansing, normalization, and enrichment; prototyping and
+              deploying a predictive model.</p>
+          <p><img src="/static/img/dss_sample.png" alt="dss image"></p>
+      </div>
+      <footer>
+        <a href="https://docs.google.com/document/d/1SP91Oq65lPeBy09vKKGcgb3j4RMHDaFFkn1e2NtrWd4/edit?usp=sharing" target="_blank">
+            View Training Sequence</a>
+      </footer>
+    </article>
+
+
+    <article id="pedagogy_university" class="projects">
+      <header>
+        <h2>University Curriculum </h2>
+      </header>
+      <div>
+        <p> A selection of upper-division college courses taught in recent years (both online and in person), including
+            sample syllabuses and anonymous student feedback.</p>
+          <br>
+        <ul >
+          <li>
+            <img src="/static/img/logo_UCLA_black_boxed.svg" alt="ucla logo">
+             <p><b> ENGL 177: L.A. Noir - </b>This course introduces students to the genre of film noir through fiction
+                 and films set in and around the city of Los Angeles, focusing on how these works of literature and
+                 visual culture represent and re-imagine the city from one generation to another. Students start by
+                 analyzing classic noirs of the 1940s alongside the hard-boiled detective novels on which they were
+                 based, then follow the evolution of the genre into some of its more contemporary iterations, e.g.
+                 neo-noir and tech-noir. The course examines both the formal history of the genre—its distinct stylistic
+                 features as these develop throughout the latter half of the 20th century—and its broader social
+                 contexts.</p>
+            <ul>
+              <li>
+                <i></i><a href="https://drive.google.com/file/d/1f1zKUzx4l87NtRpPd-TU-do6iJV4j7VY/view?usp=sharing" target="_blank">
+                    Student Feedback
+                </a>
+              </li>              <li>
+                <i></i><a href="https://drive.google.com/file/d/1yWW0MJxj7VxtiF881_UjDpgozjUiWgZw/view?usp=sharing" target="_blank">
+                    Syllabus
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <img src="/static/img/logo_UCLA_black_boxed.svg" alt="ucla logo">
+             <p><b> ENGL 115A: American Crime Fiction - </b>This course examines the development of popular styles of
+                 American crime fiction, especially around the middle of the 20th century, as readers’ common
+                 fascination with detectives and the art of detection gives way to a different sort of fascination with
+                 killers and the art of killing. Why do people read these stories? Why do they write them? What forms do
+                 they take, and what do these forms indicate about the cultural values and social conflicts that define
+                 America in the 20th century?</p>
+            <ul>
+              <li>
+                <i></i><a href="https://drive.google.com/file/d/1w7iIL5QsnFppLHChYn4v3363Q_QijICY/view?usp=sharing" target="_blank">
+                    Student Feedback
+                </a>
+              </li>              <li>
+                <i></i><a href="https://drive.google.com/file/d/1vqBjw0gLYALysPViIyEJ-c-GT-Hbtk5k/view?usp=sharing" target="_blank">
+                    Syllabus
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <img src="/static/img/logo_UCLA_black_boxed.svg" alt="ucla logo">
+             <p><b> ENGL 122: Continuity and Discontinuity (Keywords in Theory) - </b>It seems reasonable to assert
+                 that, of all literary forms, the novel is most suited to the idea of continuity—to a general sense
+                 that things go on and on, that one thing leads to another, and that individual perceptions and
+                 experiences link up in meaningful ways that cannot be reduced to discrete episodes or momentary
+                 impressions. But it also seems just as reasonable to say that, at least since Laurence Sterne published
+                 <i>Tristram Shandy</i> in 1759, no other literary form has more thoroughly mastered the art of <i>refusing</i> to
+                 continue—the art of dilation and digression, of leaving gaps and ellipses, of pausing, procrastinating,
+                 fixating on disconnected sensual details, and otherwise failing to follow a story through.</p>
+             <p>Do these aesthetic impulses contradict each other? What values are ascribed to continuity and
+                 discontinuity and why? Does this change in the 20th century, when aesthetic practices come under the
+                 pressures of modernity in ways that seem more readily assimilable to the cuts and fragments of
+                 cinematic montage than to the narrative commitments of literary realism? This course approaches
+                 these questions by way of a range of texts from the late 19th and 20th centuries, including influential
+                 works of theory and criticism as well as exemplary works of fiction, poetry and film. </p>
+              <ul>
+              <li>
+                <i></i><a href="https://drive.google.com/file/d/1dpfA9B1fFrFjhtF7Nhk9oVeUdRL2AxYA/view?usp=sharing" target="_blank">
+                    Student Feedback
+                </a>
+              </li>              <li>
+                <i></i><a href="https://drive.google.com/file/d/1Ezk6HDTxJDUIdTBe63PmYTidYokipmko/view?usp=sharing" target="_blank">
+                    Syllabus
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <footer>
+      </footer>
+    </article>
+  <article id=pedagogy_peer-review class="projects">
+      <header>
+        <h2>Peer-reviewed Research </h2>
+      </header>
+      <div>
+        <ul >
+          <li>
+            <img src="/static/img/dup-logo.png" alt="duke up logo">
+             <p><b> "Crane's Speech Figures," <i>NOVEL </i>(Duke UP) - </b>A research article examining
+                 rhetorical processes and the creation of new language structures in narrative forms associated with
+                 Naturalism.</p>
+             <p> If you do not have access to this article through an academic institution, please follow the link
+             below to request a copy.</p>
+            <ul>
+              <li>
+                <i></i><a href="https://forms.gle/ACL7xDzUVA3oPUTz7" target="_blank">
+                    Request Access
+                </a>
+              </li>              <li>
+                <i></i><a href="https://www.jstor.org/stable/43830066" target="_blank">
+                    JSTOR Link
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <footer>
+      </footer>
+    </article>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <ul>
+      <li> © Martin Zirulnik </li>
+    </ul>
+    <ul>
+    </ul>
+  </div>
+</footer>
+<script src={{ url_for('static', filename='js/script.js') }}></script>
+</html>
